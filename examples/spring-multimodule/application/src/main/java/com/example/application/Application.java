@@ -1,8 +1,10 @@
 package com.example.application;
 
 import com.example.library.component.SimpleComponent;
+import com.example.library.logging.logback.SimpleAppenderProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +17,9 @@ public class Application {
 	private final static Logger log = LoggerFactory.getLogger(Application.class);
 
 	private final SimpleComponent simpleComponent;
+
+	@Autowired
+	SimpleAppenderProperties simpleAppenderProperties;
 
 	public Application(SimpleComponent simpleComponent) {
 		this.simpleComponent = simpleComponent;

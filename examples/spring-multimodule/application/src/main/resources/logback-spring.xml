@@ -4,9 +4,11 @@
             <pattern>%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
-    <appender name="map" class="com.example.library.logging.logback.MapAppender" />
+
+    <appender name="map" class="com.example.library.logging.logback.SimpleAppender" />
+
     <root level="info">
-        <appender-ref ref="map" />
         <appender-ref ref="console" />
+        <appender-ref ref="map" />
     </root>
 </configuration>

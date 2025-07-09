@@ -7,3 +7,8 @@ server:
 
 simple-component:
   message: Testing 1 2 3
+
+local:
+  logging:
+    logback:
+      simple-appender.prefix: test-prefix
