@@ -1,0 +1,29 @@
+<settings>
+    <servers>
+        <server>
+            <id>local-nexus</id>
+            <username>user</username>
+            <password>user1</password>
+        </server>
+    </servers>
+    <profiles>
+        <profile>
+            <id>local-profile</id>
+            <repositories>
+                <repository>
+					<id>local-nexus</id>
+                    <name>local-releases</name>
+                    <url>http://nexus.local:8081/repository/local-releases/</url>
+                </repository>
+                <repository>
+					<id>local-nexus</id>
+                    <name>local-snapshots</name>
+                    <url>http://nexus.local:8081/repository/local-snapshots/</url>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>local-profile</activeProfile>
+    </activeProfiles>
+</settings>
