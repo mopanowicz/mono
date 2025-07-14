@@ -8,10 +8,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
-
 @Component
 @EnableConfigurationProperties(SimpleAppenderProperties.class)
 public class SimpleAppender extends AppenderBase<ILoggingEvent> implements ApplicationContextAware {
