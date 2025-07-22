@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @SpringBootApplication(scanBasePackages = "com.example")
@@ -31,7 +32,7 @@ public class Application {
 	@GetMapping("/")
 	public String home() {
 		String message = simpleComponent.message();
-		kafkaEventLogger.logEvent(message);
+		kafkaEventLogger.logEvent(LocalDateTime.now() +" "+ count.incrementAndGet() +" "+ message);
 //		log.info("home message={}", message);
 		return message;
 	}
