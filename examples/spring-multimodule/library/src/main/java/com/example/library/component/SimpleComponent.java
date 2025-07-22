@@ -4,12 +4,12 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.stereotype.Component;
 
 @Component
-@EnableConfigurationProperties(SimpleComponentProperties.class)
+@EnableConfigurationProperties(SimpleComponentConfig.class)
 public class SimpleComponent {
 
-	private final SimpleComponentProperties componentProperties;
+	private final SimpleComponentConfig componentProperties;
 
-	public SimpleComponent(SimpleComponentProperties componentProperties) {
+	public SimpleComponent(SimpleComponentConfig componentProperties) {
 		this.componentProperties = componentProperties;
 	}
 

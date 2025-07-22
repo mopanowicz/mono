@@ -3,7 +3,7 @@ package com.example.library.component;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("simple-component")
-public class SimpleComponentProperties {
+public class SimpleComponentConfig {
 
 	private String message;
 
