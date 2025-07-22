@@ -15,7 +15,7 @@ local:
       properties:
         bootstrap.servers: kafka.local:9092
         key.serializer: org.apache.kafka.common.serialization.StringSerializer
-        value.serializer: org.apache.kafka.common.serialization.StringSerializer
+        value.serializer: org.springframework.kafka.support.serializer.JsonSerializer
         max.block.ms: 15000 # default 60000 ms
         request.timeout.ms: 7500 # default 30000 ms
         delivery.timeout.ms: 10000 # default 200000 ms
