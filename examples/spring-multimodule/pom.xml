@@ -10,7 +10,6 @@
 
     <modules>
         <module>application</module>
-        <module>library</module>
         <module>kafka-event-logger</module>
     </modules>
 
