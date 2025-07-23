@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @RestController
 @RequiredArgsConstructor
-public class LoggingTestController {
+public class LoggingController {
 
     private final KafkaEventLogger kafkaEventLogger;
 
