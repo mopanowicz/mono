@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.3</version>
+		<version>3.5.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
@@ -16,6 +16,7 @@
 	<properties>
 		<java.version>21</java.version>
 		<kafka-event-logger.version>0.0.1</kafka-event-logger.version>
+		<local-commons.version>0.0.1</local-commons.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -35,6 +36,11 @@
 			<groupId>com.example</groupId>
 			<artifactId>kafka-event-logger</artifactId>
 			<version>${kafka-event-logger.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.example</groupId>
+			<artifactId>local-commons</artifactId>
+			<version>${local-commons.version}</version>
 		</dependency>
 
 		<dependency>

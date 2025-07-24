@@ -1,4 +1,4 @@
-package com.example.application;
+package com.example.commons;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -6,6 +6,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class JsonUtil {
 
     static ObjectMapper objectMapper = new ObjectMapper();
+
+    private JsonUtil() {
+    }
 
     static {
         objectMapper.findAndRegisterModules();
@@ -21,18 +24,5 @@ public class JsonUtil {
                 return null;
             }
         }
-    }
-}
-
-class Error {
-
-    private final String message;
-
-    Error(String message) {
-        this.message = message;
-    }
-
-    public String getMessage() {
-        return message;
     }
 }
