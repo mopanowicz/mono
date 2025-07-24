@@ -10,7 +10,8 @@
 
     <modules>
         <module>application</module>
-        <module>library</module>
+        <module>kafka-event-logger</module>
+        <module>local-commons</module>
     </modules>
 
 </project>

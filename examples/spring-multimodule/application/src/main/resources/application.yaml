@@ -7,3 +7,18 @@ server:
 
 simple-component:
   message: Testing 1 2 3
+
+local:
+  logging:
+    kafka-event-logger:
+      topic: log_events
+      properties:
+        bootstrap.servers: kafka.local:9092
+        key.serializer: org.apache.kafka.common.serialization.StringSerializer
+        value.serializer: org.springframework.kafka.support.serializer.JsonSerializer
+        max.block.ms: 3000 # default 60000 ms
+        request.timeout.ms: 1500 # default 30000 ms
+        delivery.timeout.ms: 5000 # default 200000 ms
+        linger.ms: 2500 # default 5 ms
+        batch.size: 10 # default 16384
+        buffer.memory: 1024 # default 33554432 bytes
