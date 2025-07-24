@@ -10,7 +10,7 @@ public class KafkaEventLoggerConfig {
 
     private final Map<String, String> properties = new HashMap<>();
     private String topic;
-    private boolean blocking;
+    private boolean errorToSystemOut = true;
 
     public Map<String, String> getProperties() {
         return properties;
@@ -28,11 +28,12 @@ public class KafkaEventLoggerConfig {
         this.topic = topic;
     }
 
-    public boolean isBlocking() {
-        return blocking;
+    public boolean isErrorToSystemOut() {
+        return errorToSystemOut;
     }
 
-    public void setBlocking(boolean blocking) {
-        this.blocking = blocking;
+    public void setErrorToSystemOut(boolean errorToSystemOut) {
+        this.errorToSystemOut = errorToSystemOut;
     }
+
 }

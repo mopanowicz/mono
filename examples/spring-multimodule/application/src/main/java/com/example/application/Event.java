@@ -1,6 +1,8 @@
 package com.example.application;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,4 +18,8 @@ public class Event {
     private Integer count;
     private String cargo;
 
+    @Override
+    public String toString() {
+        return JsonUtil.toJsonString(this);
+    }
 }

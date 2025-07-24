@@ -41,5 +41,8 @@ public class KafkaEventLogger {
 
     protected void handleProducerRecordError(ProducerRecord<Object, Object> producerRecord, Throwable e) {
         log.error("Error while sending producer record {}", producerRecord, e);
+        if (config.isErrorToSystemOut()) {
+            System.out.println(producerRecord.value());
+        }
     }
 }
